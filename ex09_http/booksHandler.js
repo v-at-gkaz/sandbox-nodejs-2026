@@ -23,7 +23,7 @@ export const booksHandler = (req, res) => {
 
   switch (method) {
     case 'POST':
-      re = dataSource.create({title: 'HardCode Name', author: 'HardCode Author', description: 'HardCode Descr'}); // FIXME: HADRCODE!
+      re = JSON.stringify(dataSource.create({title: 'HardCode Name', author: 'HardCode Author', description: 'HardCode Descr'})); // FIXME: HADRCODE!
       res.writeHead(201, {'Content-Type': 'application/json'});
       res.end(re);
       return;
@@ -41,7 +41,7 @@ export const booksHandler = (req, res) => {
     case 'PATCH':
     case 'PUT':
       dataSource.update(id, {author: 'HardCode'}); // FIXME: HADRCODE!
-      re = dataSource.getOne(id);
+      re = JSON.stringify(dataSource.getOne(id));
       res.writeHead(200, {'Content-Type': 'application/json'});
       res.end(re);
       return;
