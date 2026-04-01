@@ -42,7 +42,12 @@ export default class DataSource {
             throw new Error('DB:Create - Whong Payload');
         }
 
-        let id = 1 + Math.max(...this.storage.map((itm) => itm.id));
+        let id = 0;
+        if(!this.storage.length) {
+            id++;
+        } else {
+            id = 1 + Math.max(...this.storage.map((itm) => itm.id));
+        }
 
         const found = this.storage.find((itm) => {
             return itm.id === id;

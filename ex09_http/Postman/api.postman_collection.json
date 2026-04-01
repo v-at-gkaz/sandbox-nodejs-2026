@@ -1,6 +1,6 @@
 {
   "info": {
-    "_postman_id": "24da2a5b-a143-48ef-b260-39dfbe658880",
+    "_postman_id": "48db3736-6593-4689-b1ff-93eb00ec05c0",
     "name": "Sandbox JS NNGU 2026",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "44006312"
@@ -16,7 +16,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"name\": \"Преступление и наказание\",\r\n    \"author\": \"Ф.М.Достоевский\",\r\n    \"description\": \"Это произведение перешло в общественное достояние. Произведение написано автором, умершим более семидесяти лет назад, и опубликовано прижизненно, либо посмертно, но с момента публикации также прошло более семидесяти лет. Оно может свободно использоваться любым лицом без чьего-либо согласия или разрешения и без выплаты авторского вознаграждения.\"\r\n}",
+              "raw": "  {\r\n    \"author\": \"Иван Тургенев\",\r\n    \"title\": \"Отцы и дети\",\r\n    \"description\": \"Роман о конфликте поколений, разворачивающийся вокруг нигилиста Базарова, отвергающего традиционные ценности, и дворян Кирсановых.\"\r\n  }",
               "options": {
                 "raw": {
                   "language": "json"
@@ -24,12 +24,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/books",
-              "protocol": "http",
+              "raw": "{{url}}/api/books",
               "host": [
-                "localhost"
+                "{{url}}"
               ],
-              "port": "3000",
               "path": [
                 "api",
                 "books"
@@ -44,12 +42,10 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/books",
-              "protocol": "http",
+              "raw": "{{url}}/api/books",
               "host": [
-                "localhost"
+                "{{url}}"
               ],
-              "port": "3000",
               "path": [
                 "api",
                 "books"
@@ -64,16 +60,14 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/books/123",
-              "protocol": "http",
+              "raw": "{{url}}/api/books/{{id}}",
               "host": [
-                "localhost"
+                "{{url}}"
               ],
-              "port": "3000",
               "path": [
                 "api",
                 "books",
-                "123"
+                "{{id}}"
               ]
             }
           },
@@ -86,7 +80,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"name\": \"Преступление и наказание...\"\r\n}",
+              "raw": "{\r\n    \"author\": \"Достоевский Ф.М.\",\r\n    \"description\": \"Это произведение перешло в общественное достояние.\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -94,16 +88,14 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/books/123",
-              "protocol": "http",
+              "raw": "{{url}}/api/books/{{id}}",
               "host": [
-                "localhost"
+                "{{url}}"
               ],
-              "port": "3000",
               "path": [
                 "api",
                 "books",
-                "123"
+                "{{id}}"
               ]
             }
           },
@@ -116,7 +108,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"name\": \"Преступление и наказание\",\r\n    \"author\": \"Ф.М.Достоевский\"\r\n}",
+              "raw": "{\r\n    \"title\": \"Отцы и дети !\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -124,16 +116,14 @@
               }
             },
             "url": {
-              "raw": "http://localhost:3000/api/books/123",
-              "protocol": "http",
+              "raw": "{{url}}/api/books/{{id}}",
               "host": [
-                "localhost"
+                "{{url}}"
               ],
-              "port": "3000",
               "path": [
                 "api",
                 "books",
-                "123"
+                "{{id}}"
               ]
             }
           },
@@ -145,16 +135,14 @@
             "method": "DELETE",
             "header": [],
             "url": {
-              "raw": "http://localhost:3000/api/books/123",
-              "protocol": "http",
+              "raw": "{{url}}/api/books/{{id}}",
               "host": [
-                "localhost"
+                "{{url}}"
               ],
-              "port": "3000",
               "path": [
                 "api",
                 "books",
-                "123"
+                "{{id}}"
               ]
             }
           },
@@ -186,45 +174,6 @@
           "response": []
         }
       ]
-    },
-    {
-      "name": "Default Request 1",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/api/orders",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "3000",
-          "path": [
-            "api",
-            "orders"
-          ]
-        }
-      },
-      "response": []
-    },
-    {
-      "name": "Default Request 2",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": "http://localhost:3000/stat",
-          "protocol": "http",
-          "host": [
-            "localhost"
-          ],
-          "port": "3000",
-          "path": [
-            "stat"
-          ]
-        }
-      },
-      "response": []
     }
   ]
 }
