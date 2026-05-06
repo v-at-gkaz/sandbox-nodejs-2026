@@ -1,0 +1,16 @@
+{
+  "name": "ex14_only_sequelize",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "init": "node ./indexInit.js",
+    "transaction": "node ./indexTransaction.js"
+  },
+  "dependencies": {
+    "pg": "^8.20.0",
+    "sequelize": "^6.37.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
