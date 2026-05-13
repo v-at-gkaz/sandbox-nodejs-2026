@@ -1,5 +1,5 @@
 import sequelize from './db.js';
-import './models.js';
+import {Role} from './models.js';
 import {setupDatabase} from './dbInit.js';
 
 async function start() {
