@@ -80,7 +80,7 @@ export const Book = sequelize.define('Book', {
             min: 0
         }
     },
-    totalCopies: {
+    availableCopies: {
         type: DataTypes.INTEGER,
         validate: {
             min: 0

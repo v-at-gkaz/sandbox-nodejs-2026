@@ -169,3 +169,15 @@ FOR EACH ROW
 EXECUTE FUNCTION log_loan_actions();
 
 -- описание триггера - конец
+
+-- хранимая процедура
+CREATE OR REPLACE PROCEDURE reset_library()
+LANGUAGE plpgsql
+AS $$
+BEGIN
+    UPDATE books
+    SET available_copies = total_copies;
+    DELETE FROM loans;
+    DELETE FROM logs;
+END;
+$$;

@@ -26,14 +26,14 @@ const mariadbConnection = {
 const db = 'db';
 
 // pg
-//const dbuser = 'pguser';
-//const dbpass = 'pgpass123456';
-//const conn = pgConnection;
+const dbuser = 'pguser';
+const dbpass = 'pgpass123456';
+const conn = pgConnection;
 
 // mariadb
-const dbuser = 'dbuser';
-const dbpass = 'dbpass123456';
-const conn = mariadbConnection;
+// const dbuser = 'dbuser';
+// const dbpass = 'dbpass123456';
+// const conn = mariadbConnection;
 
 const sequelize = new Sequelize(
     db,
