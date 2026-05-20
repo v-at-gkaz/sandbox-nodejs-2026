@@ -66,6 +66,12 @@ export const Book = sequelize.define('Book', {
         type: DataTypes.STRING,
         allowNull: false
     },
+    author: {
+        type: DataTypes.STRING,
+    },
+    description: {
+        type: DataTypes.STRING,
+    },
     genreId: {
         type: DataTypes.INTEGER,
         references: {
